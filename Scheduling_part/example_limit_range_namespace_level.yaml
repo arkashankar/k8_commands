@@ -23,5 +23,8 @@ spec:
 
 
 
-
+#Purpose: A LimitRange sets default resource limits and requests for containers within Pods if not explicitly specified. It helps in ensuring that Pods have appropriate resource requests and limits set, which can prevent resource contention and ensure optimal resource utilization.
+#Scope: It applies to individual Pods within a namespace.
+#Limits: LimitRanges typically specify default resource requests and limits for CPU and memory, but can also include other resource types.
+#Example: You can set a LimitRange to ensure that every Pod in a namespace has a minimum and maximum CPU and memory allocation, even if these values are not explicitly specified in the Pod manifest.
 
