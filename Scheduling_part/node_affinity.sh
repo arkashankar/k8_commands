@@ -19,4 +19,7 @@ kubectl get pods -o wide
 kubectl create deployment red --image=nginx --replicas=2 --dry-run=client -o yaml > red.yaml
 
 
+#to edit the running pod --> we cannot do it so we can replace it and edit it same time using the command below 
+kubectl replace --force -f <name_of_yaml>.yaml
+
 
