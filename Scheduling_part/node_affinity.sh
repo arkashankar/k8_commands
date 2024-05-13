@@ -22,4 +22,14 @@ kubectl create deployment red --image=nginx --replicas=2 --dry-run=client -o yam
 #to edit the running pod --> we cannot do it so we can replace it and edit it same time using the command below 
 kubectl replace --force -f <name_of_yaml>.yaml
 
+#to get all daemon-sets in the all the namespaces
+kubectl get daemonsets -A
+
+#there is no direct command to create a daemonsets
+
+#To see the events of scheduling
+kubectl get event -o wide
+
+#to see the logs of the scheduler
+kubectl logs my-custom-scheduler --name-space=kube-system
 
