@@ -33,3 +33,6 @@ kubectl get event -o wide
 #to see the logs of the scheduler
 kubectl logs my-custom-scheduler --name-space=kube-system
 
+kubectl get serviceaccount -n kube-system
+
+kubectl get clusterrolebinding
