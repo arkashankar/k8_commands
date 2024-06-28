@@ -27,3 +27,12 @@ kubectl create configmap my-config --from-literal=key1=value1 --from-literal=key
 
 #to edit a pod 
 kubectl edit pod web-app-color
+
+#to replace running pods with new modified pod defination file
+kubectl replace --force -f pod.yaml
+
+#to create secret using imperatve way
+kubectl create secret generic <secret-name> --from-literal=<key>=<value>
+
+#to create a secret using file
+kuebctl create secret generic <secret-name> --from-file=<path-to-file>
