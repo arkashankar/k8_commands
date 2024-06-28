@@ -36,3 +36,7 @@ kubectl create secret generic <secret-name> --from-literal=<key>=<value>
 
 #to create a secret using file
 kuebctl create secret generic <secret-name> --from-file=<path-to-file>
+
+#for declarative way we need to put encoded value for secrets
+#in linux system
+echo -n 'mysql' | base64
