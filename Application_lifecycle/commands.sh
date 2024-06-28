@@ -15,3 +15,15 @@ kubectl create configmap <config-name> --from-literal=<key>=<value>
 
 #to get configmap
 kubectl get configmaps
+
+#to get full info about configmap
+kubectl describe configmaps config-name
+
+#to get yaml file for the config file
+kubectl create configmap my-config --from-literal=key1=value1 --from-literal=key2=value2 --dry-run=client -o yaml > configmap.yaml
+
+#to put multiple values in the config map
+kubectl create configmap my-config --from-literal=key1=value1 --from-literal=key2=value2
+
+#to edit a pod 
+kubectl edit pod web-app-color
