@@ -40,3 +40,6 @@ kuebctl create secret generic <secret-name> --from-file=<path-to-file>
 #for declarative way we need to put encoded value for secrets
 #in linux system
 echo -n 'mysql' | base64
+
+##how to get inside a running pod
+kubectl exec -it <pod-name> -- /bin/sh
