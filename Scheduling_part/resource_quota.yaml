@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: example-resource-quota
+  namespace: your-namespace
+spec:
+  hard:
+    pods: "10"
+    requests.cpu: "2"
+    requests.memory: 1Gi
+    limits.cpu: "4"
+    limits.memory: 2Gi
+    persistentvolumeclaims: "5"
+    services.loadbalancers: "2"
+
+
+#Purpose: A ResourceQuota sets limits on the aggregate resource consumption in a namespace. It helps to prevent a namespace from consuming more resources than allowed, which can help in resource isolation and ensuring fair resource distribution among different namespaces.
+#Scope: It applies to the entire namespace.
+#Limits: ResourceQuotas can limit various types of resources such as pods, CPU, memory, persistent volume claims, and services.
+#Example: You can set a ResourceQuota to limit the total number of pods, total CPU usage, total memory usage, etc., within a namespace.
